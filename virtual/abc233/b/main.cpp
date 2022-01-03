@@ -14,11 +14,20 @@ typedef long long ll;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    ll n;
-    cin >> n;
-
-    cout << n << endl;
+    int l, r;
+    cin >> l >> r;
+    l--;
+    r--;
+    string s;
+    cin >> s;
+    for (int i = 0; i < l; i++) {
+        cout << s[i];
+    }
+    for (int i = r; i >= l; i--) {
+        cout << s[i];
+    }
+    for (int i = r + 1; i < s.size(); i++) {
+        cout << s[i];
+    }
+    cout << endl;
 }

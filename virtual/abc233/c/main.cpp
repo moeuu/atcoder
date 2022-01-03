@@ -16,9 +16,8 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    ll n;
-    cin >> n;
-
-    cout << n << endl;
+    ll n, x;
+    cin >> n >> x;
+    int ans = 0;
+    vector<vector<int>> v;
 }

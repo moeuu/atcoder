@@ -12,13 +12,9 @@ typedef long long ll;
 #define INF64 9223372036854775807  // 9.223372036854775807×10^{18}:64bit整数のinf
 #define MOD 1000000007             //問題による
 
-int main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main() {
+  ll n;
+  cin >> n;
 
-    ll n;
-    cin >> n;
-
-    cout << n << endl;
+  cout << n << endl;
 }
