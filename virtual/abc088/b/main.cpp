@@ -6,6 +6,7 @@ typedef long long ll;
 #define repr(i, n) for (ll i = (ll)(n); i >= 0; i--)
 #define vsort(v) sort(v.begin(), v.end())
 #define vsortr(v) sort(v.begin(), v.end(), greater<ll>{})
+
 #define vsum(v) accumulate(v.begin(), v.end(), 0)
 
 //定数
@@ -20,4 +21,21 @@ int main()
 
     ll n;
     cin >> n;
+
+    vector<ll> v(n);
+    for (ll i = 0; i < n; i++) {
+        cin >> v[i];
+    }
+    vsortr(v);
+
+    vector<ll> a;
+    vector<ll> b;
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            a.push_back(v[i]);
+        } else {
+            b.push_back(v[i]);
+        }
+    }
+    cout << vsum(a) - vsum(b) << endl;
 }

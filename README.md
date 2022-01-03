@@ -26,3 +26,5 @@ acc new (コンテストID）
 https://atcoder.jp/contests/"abc001"
 ```
 の/contests/以下の部分
+
+cmd + shift + P > タスクの実行 > Checktestcase 

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-#define rep(i, n) for (ll i = 0; i < (ll)(n); i++)
+#define rep(i, n) for (ll i = 1; i < (ll)(n); i++)
 #define repab(i, a, b) for (ll i = (ll)(a); i < (ll)(b); i++)
 #define repr(i, n) for (ll i = (ll)(n); i >= 0; i--)
 #define vsort(v) sort(v.begin(), v.end())
@@ -20,4 +20,23 @@ int main()
 
     ll n;
     cin >> n;
+
+    ll ans = 1;
+    ll max_2 = 0;
+
+    for (int i = 1; i <= n; i++) {
+        int temp_c = 0;
+        int temp = i;
+        while (temp % 2 == 0) {
+            temp /= 2;
+            temp_c++;
+        }
+
+        if (temp_c > max_2) {
+            max_2 = temp_c;
+            ans = i;
+        }
+    }
+
+    cout << ans << endl;
 }
