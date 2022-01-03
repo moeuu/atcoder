@@ -16,6 +16,7 @@ using pll = pair<ll, ll>;
 #define vsortr(v) sort(v.begin(), v.end(), greater<ll>{})
 #define vsum(v) accumulate(v.begin(), v.end(), 0)
 
+
 //定数
 #define INF32 2147483647           // 2.147483647×10^{9}:32bit整数のinf
 #define INF64 9223372036854775807  // 9.223372036854775807×10^{18}:64bit整数のinf
@@ -26,6 +27,27 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    ll n;
-    cin >> n;
+    ll n, m, c;
+    cin >> n >> m >> c;
+    ll v[n + 1][m];
+    ll ans = 0;
+    rep(i, n + 1)
+    {
+        rep(j, m)
+        {
+            cin >> v[i][j];
+        }
+    }
+    for (int i = 1; i < (ll)n + 1; i++) {
+        ll s = c;
+        rep(j, m)
+        {
+            s += v[0][j] * v[i][j];
+        }
+        if (s > 0) {
+            ans++;
+        }
+    }
+
+    cout << ans << endl;
 }
